@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <record id="pos_config_view_form_inherit_pos_custom_receipt" model="ir.ui.view">
+        <field name="name">pos.config.form.inherit.pos.custom.receipt</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <div id="other_devices" position="after">
+                <div class="col-12 col-lg-6 o_setting_box"
+	                     id="pos_custom_receipt">
+	                    <div class="o_setting_left_pane">
+	                        <field name="pos_custom_receipt"/>
+	                    </div>
+	                    <div class="o_setting_right_pane">
+	                        <label for="pos_custom_receipt"/>
+	                        <div class="text-muted mb16">
+                                    pos_custom_receipt
+                            </div>
+                            <div class="content-group pos_iot_config" attrs="{'invisible' : [('pos_custom_receipt', '=', False)]}">
+                                    <div class="row">
+                                        <label string="show company contact address" for="show_company_contact_address" class="col-lg-4 o_light_label"/>
+                                        <field name="show_company_contact_address"/>
+                                    </div>
+                                    <div class="row">
+                                        <label string="show_company_phone" for="show_company_phone" class="col-lg-4 o_light_label"/>
+                                        <field name="show_company_phone"/>
+                                    </div>
+                                    <div class="row">
+                                        <label string="show_company_email" for="show_company_email" class="col-lg-4 o_light_label"/>
+                                        <field name="show_company_email"/>
+                                    </div>
+                                    <div class="row">
+                                        <label string="show_company_website" for="show_company_website" class="col-lg-4 o_light_label"/>
+                                        <field name="show_company_website"/>
+                                    </div>
+                                    <div class="row">
+                                        <label string="show_qr_code" for="show_qr_code" class="col-lg-4 o_light_label"/>
+                                        <field name="show_qr_code"/>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+	        </div>
+
+        </field>
+    </record>
+  </data>
+</odoo>
