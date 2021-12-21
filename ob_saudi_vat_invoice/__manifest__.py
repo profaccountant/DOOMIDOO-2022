@@ -13,8 +13,7 @@
     "author" : "odoobridge",
     "email": 'odoobridge@gmail.com',
     "license": 'OPL-1',
-    'depends': ['account'],
-    # 'depends': ['account','l10n_sa_invoice'],
+    'depends': ['account','l10n_sa_invoice'],
 
     'data': [
         'report/vat_invoice_report_print.xml',
